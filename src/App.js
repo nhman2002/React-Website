@@ -1,19 +1,18 @@
-import './App.css';
-import React from 'react';
-import Navbar from './components/Navbar';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Routes } from 'react-router-dom';    // in react-router-dom v6, Switch turn to Routes, need to update that info
-import { Route } from 'react-router-dom';
+import "./App.css";
+import React from "react";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+// in react-router-dom v6, Switch turn to Routes, need to update that info
+import Home from "./components/pages/Home";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' exact/>
+        <Route path="/" exact Component={Home} />
       </Routes>
     </Router>
-    
   );
 }
 
